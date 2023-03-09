@@ -12,11 +12,14 @@ function App() {
     event.preventDefault();
     if (nombre.trim().length < 3 || nombre.startsWith(" ")) {
       setMsg("Name must have at least 3 characters and no spaces at the beginning");
+    }else{
+      setValid(true)
     }
     if (colorFav.trim().length < 6) {
       setMsg("Description must have at least 6 characters");
+    }else{
+      setValid(true)
     }
-    setValid(true)
     console.log("Name:", nombre);
     console.log("Colorfav:", colorFav);
   };
