@@ -10,14 +10,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (nombre.trim().length < 3 || nombre.startsWith(" ")) {
-      setValid(false)
-      setMsg("Por favor chequea que la informacion sea correcta");
-    }else{
-      setValid(true)
-      setMsg("");
-    }
-    if (colorFav.trim().length < 6) {
+    if (nombre.trim().length < 3 || nombre.startsWith(" ") || colorFav.trim().length < 6) {
       setValid(false)
       setMsg("Por favor chequea que la informacion sea correcta");
     }else{
